@@ -6,10 +6,8 @@ dotenv.config()
 const PORT = process.env.PORT
 
 const app = express();
-const corsOptions = {
-    origin: ['http://localhost:5173', /\.onrender\.com$/],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",};
-  app.use(cors(corsOptions));
+
+  app.use(cors());
 
 
 app.use(express.json());
